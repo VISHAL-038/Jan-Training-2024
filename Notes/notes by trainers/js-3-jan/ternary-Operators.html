@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+    <title>Age Check</title>
+</head>
+<body>
+
+<h1>Age Check</h1>
+
+<p>Enter your age:</p>
+<input type="number" id="ageInput" placeholder=" Enter Your age">
+
+<button onclick="checkAge()">Check Beverage</button>
+
+<p id="result"></p>
+
+<script>
+    function checkAge() {
+        const age = document.getElementById("ageInput").value;
+        const beverage = age >= 21 ? "Beer" : "Juice";
+        const resultElement = document.getElementById("result");
+        resultElement.textContent = `You are ${age} years old. You can have: ${beverage}`;
+    }
+</script>
+
+</body>
+</html>

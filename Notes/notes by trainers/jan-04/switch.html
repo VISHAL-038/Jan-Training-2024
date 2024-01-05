@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grade Checker</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 50px;
+      }
+
+      select {
+        padding: 8px;
+        font-size: 16px;
+      }
+
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      p {
+        margin-top: 20px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Grade Checker</h1>
+    <label for="gradeSelect">Select a grade:</label>
+    <select id="gradeSelect">
+      <option value="A">A</option>
+      <option value="B">B</option>
+      <option value="C">C</option>
+      <option value="Other">Other</option>
+    </select>
+    <button onclick="checkGrade()">Check Grade</button>
+    <p id="result"></p>
+
+    <script>
+      function checkGrade() {
+        var grade = document.getElementById("gradeSelect").value;
+        var result;
+
+        switch (grade) {
+          case "A":
+            result = "A Grade";
+            break;
+          case "B":
+            result = "B Grade";
+            break;
+          case "C":
+            result = "C Grade";
+            break;
+          default:
+            result = "No Grade";
+        }
+
+        document.getElementById("result").textContent = "Result: " + result;
+      }
+    </script>
+  </body>
+</html>

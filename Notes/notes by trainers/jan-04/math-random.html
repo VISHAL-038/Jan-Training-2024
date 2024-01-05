@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Number Generator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 50px;
+    }
+
+    #result {
+      font-size: 24px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Random Number Generator</h1>
+
+  <button onclick="generateRandomNumber()">Generate Random Number</button>
+  <p id="result"></p>
+
+  <script>
+    function generateRandomNumber() {
+      const min = 1;
+      const max = 100;
+
+      // Generate a random number between 'min' and 'max'
+      const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+
+      // Display the result on the webpage
+      document.getElementById('result').textContent = `Random number between ${min} and ${max}: ${randomNumber}`;
+    }
+  </script>
+
+</body>
+</html>

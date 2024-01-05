@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* parent is absolute so child relative or vice versa */
+        .box{
+            position: absolute;
+            background-color: aqua;
+            width: 100px;
+            height: 100px;
+            margin-top: 300px;
+            margin-left: 600px;
+        }
+        .content{
+            position: fixed;
+            background-color: blue;
+            width: 500px;
+            height: 100px;
+            margin-top: 500px;
+        }
+        .sticky{
+            position:sticky;
+            width: 600px;
+            height: 100px;
+            top: 0;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam saepe ipsam obcaecati incidunt ducimus molestias pariatur voluptatum nemo earum, sit illo veritatis sunt quia asperiores, non possimus architecto beatae! Libero?</p>
+
+        <div class="box"></div>
+        <div class="content"></div>
+        <div class="sticky"></div>
+    </div>
+</body>
+</html>

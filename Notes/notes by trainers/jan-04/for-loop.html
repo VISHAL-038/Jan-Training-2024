@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>JavaScript For loop</h3>
+    <p>
+      The JavaScript for loop iterates the elements for the fixed number of
+      times. It should be used if number of iteration is known.
+    </p>
+    <p style="font-weight: 600">
+      for (initialization; condition; increment) <br />
+      { <br />
+      code to be executed <br />
+      }
+    </p>
+
+    <table>
+      <tr>
+        <th>Multiplier</th>
+        <th>Result</th>
+      </tr>
+
+      <script>
+        var multiplier = 5;
+
+        for (var i = 1; i <= 10; i++) {
+          var result = multiplier * i;
+          document.write("<tr><td>" +  multiplier + " x " + i +"</td><td>" +   result + "</td></tr>"   );
+        }
+      </script>
+    </table>
+  </body>
+</html>

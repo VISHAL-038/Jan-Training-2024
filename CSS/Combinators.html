@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* descendant combinator  */
+        div h1{
+            background-color: grey;
+        }
+        /* child combinator selector (just inside one change)*/
+        div>h1{
+            color: blue;
+        }
+        /* body{
+            width: 200px;
+            height: 200px;
+            background-image: linear-gradient(to right, red,  yellow ,  green) ; 
+             background-image: conic-gradient(red, yellow, green); 
+            background-image: radial-gradient(red, yellow ,green);
+        } */
+
+        /* adjacent sibling(element) */
+        h1~h2{
+            color: red;
+        }
+        h1+h2+h2{
+            color: blue;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- combinators (when two selector work at same time [like below we have used h1 inside div])-->
+    <div>
+        <h1>one</h1>
+        <h1>two</h1>
+        <h1>three</h1>
+        <p>hello there are 3 numbers</p>
+        <div>
+            <h1>four</h1>
+            <section><h1>hello css</h1></section>
+        </div>
+    </div>
+    <h1>one two three</h1>
+    <h2>one two three four</h2>
+    <h2>one two</h2>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>String Methods Example</title>
+</head>
+<body>
+  <script>
+    let originalString = "   Hello, JavaScript!   ";
+    // document.write(originalString)
+    // console.log(originalString)
+
+    // charAt()
+    document.write("charAt(7): ", originalString.charAt(7), "<br>");
+
+    // charCodeAt()
+    document.write("charCodeAt(7): ", originalString.charCodeAt(7), "<br>");
+
+    // concat()
+    let concatenatedString = originalString.concat(" Welcome!");
+    document.write("concatenatedString: ", concatenatedString, "<br>");
+
+    // includes()
+    document.write("includes('JavaScript'): ", originalString.includes("JavaScript"), "<br>");
+
+    // endsWith()
+    document.write("endsWith('!'): ", originalString.endsWith('!'), "<br>");
+
+    // indexOf()
+    document.write("indexOf('JavaScript'): ", originalString.indexOf("JavaScript"), "<br>");
+
+    // lastIndexOf()
+    document.write("lastIndexOf('l'): ", originalString.lastIndexOf('l'), "<br>");
+
+    // replace()
+    let replacedString = originalString.replace("JavaScript", "Node.js");
+    document.write("replace(): ", replacedString, "<br>");
+
+    // search()
+    document.write("search('JavaScript'): ", originalString.search("JavaScript"), "<br>");
+
+    // slice()
+    document.write("slice(7, 18): ", originalString.slice(7, 18), "<br>");
+
+    // split()
+    document.write("split(','): ", originalString.split(','), "<br>");
+
+    // startsWith()
+    document.write("startsWith('   Hello'): ", originalString.startsWith('   Hello'), "<br>");
+
+    // substr()
+    document.write("substr(7, 10): ", originalString.substr(7, 10), "<br>");
+
+    // substring()
+    document.write("substring(7, 18): ", originalString.substring(7, 18), "<br>");
+
+    // toLowerCase()
+    document.write("toLowerCase(): ", originalString.toLowerCase(), "<br>");
+
+    // toUpperCase()
+    document.write("toUpperCase(): ", originalString.toUpperCase(), "<br>");
+
+    // trim()
+    document.write("trim(): ", originalString.trim(), "<br>");
+
+    // valueOf()
+    document.write("valueOf(): ", originalString.valueOf(), "<br>");
+
+    // trimStart() and trimEnd()
+    document.write("trimStart(): ", originalString.trimStart(), "<br>");
+    document.write("trimEnd(): ", originalString.trimEnd(), "<br>");
+
+    // padStart() and padEnd()
+    let paddedStartString = originalString.padStart(30, '*');
+    document.write("padStart(30, '*'): ", paddedStartString, "<br>");
+    let paddedEndString = originalString.padEnd(30, '*');
+    document.write("padEnd(30, '*'): ", paddedEndString, "<br>");
+    
+  
+  </script>
+</body>
+</html>

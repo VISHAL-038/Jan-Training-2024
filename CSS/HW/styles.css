@@ -1,0 +1,129 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    background-image: url(./assests/pexels-juan-agustin-2340254.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+}
+
+button{
+    background-color: #f1c40f;
+}
+
+.container{
+    background-color: white;
+    /* text-align: center; */
+    margin: 50px;
+    border: 3px solid wheat;
+    border-radius: 12px;
+    height: 900px;
+}
+
+.header{
+    background-color: blue;
+    color: whitesmoke;
+    height: 50px;
+    margin-top: 0px;
+    width: 100%;
+
+}
+
+.contact i a{
+    font-size: 20px;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.contact button{
+    float: right;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+nav{
+    overflow: hidden;
+    background-color: white;
+    text-align: center;
+}
+.navbar .logo {
+    float: left;
+    font-size: 40px;
+}
+
+
+#mas {
+    font-size: 28px;
+    margin: 0;
+    margin-right: auto;
+}
+.list-items {
+    display: flex;
+    text-align: left;
+}
+
+nav a {
+    color: grey;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px;
+}
+nav a:hover {
+    color: black;
+}
+nav button {
+    float: right;
+    margin-right: 50px; /* Adjust as needed */
+}
+
+.main {
+    padding: 20px;
+    background-image: url(./assests/pexels-tima-miroshnichenko-5428012.jpg);
+    margin: 10px;
+    background-size: cover;
+    background-position: center;
+    min-height: 500px;
+    text-align: center;
+    bottom: 220px;
+}
+
+.main h1{
+    color: whitesmoke;
+    font-size: 60px;
+    margin-top: 100px;
+}
+
+.section{
+    background-color: white;
+    /* margin: 20px; */
+    padding: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border: black solid;
+    margin-top: -150px;
+}
+
+.section h3 {
+    background-color: #f1c40f;
+    color: white;
+    padding: 10px;
+    margin: 0;
+  }
+
+  .section button {
+    background-color: #f1c40f;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .grid-container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 15px;
+    text-align: center;
+    margin: 50px;
+}
