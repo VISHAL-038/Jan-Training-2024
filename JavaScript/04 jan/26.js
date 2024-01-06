@@ -12,12 +12,12 @@ const fruits=["mango","apple"];
 // fruits.pop();
 // console.log(fruits);
 
-//for of loop
+//for of loop   //value
 for(let fruit of fruits){
     console.log(fruit);
 }
 
-//for in loop
+//for in loop  //index
 for(let i in fruits){
     console.log(fruits[i],i);
 }
