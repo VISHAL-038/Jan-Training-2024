@@ -1,11 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
 <body>
-    
+  <div id="image-container">
+    <!-- <img src="path/to/your/image.jpg" alt="Your Image" width="200"> -->
+  </div>
+
+  <div id="timer-container">
+    <label for="days">Days: </label>
+    <input type="number" id="days" min="0" value="1">
+    <label for="hours">Hours: </label>
+    <input type="number" id="hours" min="0" max="23" value="12">
+    <label for="minutes">Minutes: </label>
+    <input type="number" id="minutes" min="0" max="59" value="30">
+    <label for="seconds">Seconds: </label>
+    <input type="number" id="seconds" min="0" max="59" value="0">
+    <button onclick="start()">Start Countdown</button>
+    <button onclick="stop()">Stop Countdown</button>
+    <div id="timer">00d 00h 00m 00s</div>
+
+    <div id="display"></div>
+  </div>
+
+  <script src="./timer.js"></script>
 </body>
 </html>
