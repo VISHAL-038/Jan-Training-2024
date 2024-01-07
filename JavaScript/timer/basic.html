@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Countdown Timer</title>
+</head>
+<body>
+
+<div id="countdown"></div>
+
+<script>
+function startCountdown(seconds) {
+  // Check if the seconds is a valid positive integer
+  if (typeof seconds !== 'number' || seconds < 0 || seconds % 1 !== 0) {
+    console.log('Please provide a valid positive integer for the countdown.');
+    return;
+  }
+
+  let timer = seconds;
+
+  function updateCountdown() {
+    document.getElementById('countdown').innerHTML = timer;
+
+    if (timer === 0) {
+      clearInterval(countdownInterval);
+      alert('Countdown complete!');
+    } else {
+      timer--;
+    }
+  }
+
+  updateCountdown(); // Initial display
+
+  const countdownInterval = setInterval(updateCountdown, 1000); // Update every second
+}
+
+// Example: Start a countdown from 10 seconds
+startCountdown(10);
+</script>
+
+</body>
+</html>

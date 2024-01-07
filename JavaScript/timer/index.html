@@ -4,6 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+    body{
+      background-color: gray;
+    }
+  </style>
 </head>
 <body>
   <div id="image-container">
@@ -21,7 +26,7 @@
     <input type="number" id="seconds" min="0" max="59" value="0">
     <button onclick="start()">Start Countdown</button>
     <button onclick="stop()">Stop Countdown</button>
-    <div id="timer">00d 00h 00m 00s</div>
+    <div id="timer"></div>
 
     <div id="display"></div>
   </div>

@@ -1,10 +1,10 @@
 let countdownInterval;
 
 function Duration() {
-  const days = parseInt(document.getElementById('days').value, 10) || 0;
-  const hours = parseInt(document.getElementById('hours').value, 10) || 0;
-  const minutes = parseInt(document.getElementById('minutes').value, 10) || 0;
-  const seconds = parseInt(document.getElementById('seconds').value, 10) || 0;
+  const days = parseInt(document.getElementById('days').value)||0;
+  const hours = parseInt(document.getElementById('hours').value)||0;
+  const minutes = parseInt(document.getElementById('minutes').value)||0;
+  const seconds = parseInt(document.getElementById('seconds').value)||0;
 
   return (days * 24 * 60 * 60) + (hours * 60 * 60) + (minutes * 60) + seconds;
 }
@@ -30,22 +30,23 @@ function start() {
     if (timer === 0) {
       clearInterval(countdownInterval);
       alert('Countdown complete!');
-    } else {
+    } 
+    else 
+    {
       timer--;
     }
   }
 
-  updateCountdown(); // Initial display
+  updateCountdown(); 
 
-  countdownInterval = setInterval(updateCountdown, 1000); // Update every second
+  countdownInterval = setInterval(updateCountdown,1000); 
 }
 
 function stop() {
   clearInterval(countdownInterval);
   alert('Countdown stopped!');
   
-  // Reset the countdown display and clear the user input
-  document.getElementById('countdown').innerHTML = '';
+  document.getElementById('timer').innerHTML = '';
   document.getElementById('days').value = '';
   document.getElementById('hours').value = '';
   document.getElementById('minutes').value = '';
