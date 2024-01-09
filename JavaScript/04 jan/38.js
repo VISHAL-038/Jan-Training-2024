@@ -26,8 +26,6 @@ async function p(){
   console.log(r2,"response two")
 }
 
-
-
 const result = p()
 console.log("it runs")
 // console.log(result,"result<><><<><><")
