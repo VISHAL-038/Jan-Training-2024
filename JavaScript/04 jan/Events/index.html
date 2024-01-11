@@ -1,0 +1,34 @@
+<!--  mouse events-click(onclick),mouseover(onmouseover), mousedown(onmousedown) , mouseup(onmouseup),mousemove(onmousemove)
+ keyboard events - keydown,keypress,keyup 
+ form events-focus(onfocus),submit(onsubmit),blur(onblur),change(onchange)
+ window/document events-load(onload),unload(onunload),resize(onresize) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: lightgrey;
+        }
+    </style>
+</head>
+<body>
+    <!-- <button onclick="onclickevents()">click</button> -->
+    <!-- <button onmouseover="onmouseoverevents()">click</button> -->
+    <button onmouseout="onmousedownevent()">click</button>
+
+    <script>
+        // function onclickevents(){
+        //     document.write("bye bye class is over")
+        // }
+        // function onmouseoverevents(){
+        //     alert("you are over button")
+        // }
+        function onmousedownevent() {
+            alert("you are away from click button");    
+        }
+    </script>
+</body>
+</html>
