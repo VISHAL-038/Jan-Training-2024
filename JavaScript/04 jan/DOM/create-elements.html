@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>append child</title>
+    <style>
+        #divID{
+            width : 300px;
+            height: 200px;
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+    <div id="divID"> hii there</div>
+    <!-- <h1 id="head">heading 1</h1> -->
+    <script>
+        // let pd = document.getElementById("h1")
+        // let newh = document.createElement("h2");
+        // newh.textContent = "heading 2";
+        // h1.appendChild(newh)
+
+        // let newpara = document.createElement("p");
+        // newpara.textContent = "new p tag is created by javascript";
+        // document.body.appendChild(newpara);
+
+        let parentDiv = document.getElementById("divID");
+        let childDiv = document.createElement("h2");
+        childDiv.textContent = "hello there!";
+        parentDiv.appendChild(childDiv);   //uske neche
+        //parentDiv.prepend(childDiv);    //uske upr
+
+    </script>
+</body>
+</html>

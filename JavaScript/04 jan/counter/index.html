@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            margin-left: 3%;
+        }
+        p{
+            margin-left: 5%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Counter</h1>
+    <p id="counter"></p>
+    <button onclick="decrement()">Decrement</button>
+    <button onclick="reset()">Reset</button>
+    <button onclick="increment()">Incrementar</button>
+
+    <script>
+        // let counter = document.getElementById('counter');
+        // function reset(){
+        //     counter.innerHTML = '0';
+        // }
+        // function increment(){
+        //     let contador = parseInt(counter.innerHTML);
+        //     counter.innerHTML = (contador + 1) ;
+        // }
+        // function decrement(){
+        //     let contadr = parseInt(counter.innerHTML);
+        //     counter.innerHTML =(contadr - 1);
+        // }
+      let counter = 0;
+      document.getElementById("counter").innerHTML = counter;
+
+      function increment() {
+        counter++;
+        document.getElementById("counter").innerHTML = counter;
+      }
+      function decrement() {
+        counter--;
+        document.getElementById("counter").innerHTML = counter;
+      }
+      function reset() {
+        counter = 0;
+        document.getElementById("counter").innerHTML = "";
+      }
+    </script>
+</body>
+</html>
