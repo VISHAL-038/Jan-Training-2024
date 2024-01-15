@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QR Code Generator and Reader</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f4f4f4;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    input {
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    #qrcode {
+      margin: 20px 0;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-weight: bold;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <h1>QR Code Generator</h1>
+  <input type="text" id="inputText" placeholder="Enter text">
+  <button onclick="generateQRCode()">Generate QR Code</button>
+
+  <div id="qrcode"></div>
+
+  <h1>QR Code Reader</h1>
+  <label for="fileInput" style="margin-bottom: 10px;">Choose an image:</label>
+  <input type="file" accept="image/*" id="fileInput" onchange="readQRCode()">
+
+  <div id="result"></div>
+
+  <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+  <script src="https://cdn.rawgit.com/cozmo/jsQR/master/dist/jsQR.js"></script>
+
+  <script>
+    function generateQRCode() {
+      var inputText = document.getElementById('inputText').value;
+      var qrcode = new QRCode(document.getElementById("qrcode"), {
+        text: inputText,
+        width: 128,
+        height: 128
+      });
+    }
+
+    function readQRCode() {
+      var fileInput = document.getElementById('fileInput');
+      var resultDiv = document.getElementById('result');
+
+      if (fileInput.files.length > 0) {
+        var file = fileInput.files[0];
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+          var img = new Image();
+          img.src = e.target.result;
+
+          img.onload = function () {
+            var canvas = document.createElement('canvas');
+            canvas.width = img.width;
+            canvas.height = img.height;
+            var ctx = canvas.getContext('2d');
+            ctx.drawImage(img, 0, 0);
+
+            var imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+            var code = jsQR(imageData.data, imageData.width, imageData.height);
+
+            if (code) {
+              resultDiv.textContent = "QR Code content: " + code.data;
+            } else {
+              resultDiv.textContent = "No QR Code found.";
+            }
+          };
+        };
+
+        reader.readAsDataURL(file);
+      } else {
+        resultDiv.textContent = "Please select an image.";
+      }
+    }
+  </script>
+</body>
+</html>

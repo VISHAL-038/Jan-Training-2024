@@ -1,0 +1,192 @@
+In JavaScript, almost "everything" is an object.
+
+Booleans can be objects (if defined with the new keyword)
+Numbers can be objects (if defined with the new keyword)
+Strings can be objects (if defined with the new keyword)
+Dates are always objects
+Maths are always objects
+Regular expressions are always objects
+Arrays are always objects
+Functions are always objects
+Objects are always objects
+
+Creating a JavaScript Object
+With JavaScript, you can define and create your own objects.
+There are different ways to create new objects:
+Create a single object, using an object literal.
+Create a single object, with the keyword new.
+Define an object constructor, and then create objects of the constructed type.
+Create an object using Object.create().
+
+
+JavaScript Object Properties
+What is this?
+In JavaScript, the this keyword refers to an object.
+
+Which object depends on how this is being invoked (used or called).
+
+The this keyword refers to different objects depending on how it is used:
+
+In an object method, this refers to the object.
+Alone, this refers to the global object.
+In a function, this refers to the global object.
+In a function, in strict mode, this is undefined.
+In an event, this refers to the element that received the event.
+Methods like call(), apply(), and bind() can refer this to any object.
+
+JavaScript Methods
+JavaScript methods are actions that can be performed on objects.
+
+A JavaScript method is a property containing a function definition.
+
+Property	Value
+firstName	John
+lastName	Doe
+age	50
+eyeColor	blue
+fullName	function() {return this.firstName + " " + this.lastName;}
+
+
+Accessing Object Methods
+You access an object method with the following syntax:
+
+objectName.methodName()
+You will typically describe fullName() as a method of the person object, and fullName as a property.
+
+The fullName property will execute (as a function) when it is invoked with ().
+
+Using Built-In Methods
+This example uses the toUpperCase() method of the String object, to convert a text to uppercase:
+
+let message = "Hello world!";
+let x = message.toUpperCase();
+The value of x, after execution of the code above will be:
+
+HELLO WORLD!
+
+How to Display JavaScript Objects?
+Some common solutions to display JavaScript objects are:
+
+Displaying the Object Properties by name
+Displaying the Object Properties in a Loop
+Displaying the Object using Object.values()
+Displaying the Object using JSON.stringify()
+
+
+Displaying the Object in a Loop
+const person = {
+  name: "John",
+  age: 30,
+  city: "New York"
+};
+
+let txt = "";
+for (let x in person) {
+txt += person[x] + " ";
+};
+
+document.getElementById("demo").innerHTML = txt;
+
+
+Using Object.values()
+Any JavaScript object can be converted to an array using Object.values():
+
+const person = {
+  name: "John",
+  age: 30,
+  city: "New York"
+};
+
+const myArray = Object.values(person);
+
+Using JSON.stringify()
+Any JavaScript object can be stringified (converted to a string) with the JavaScript function JSON.stringify():
+
+const person = {
+  name: "John",
+  age: 30,
+  city: "New York"
+};
+
+let myString = JSON.stringify(person);
+
+Stringify Dates
+JSON.stringify converts dates into strings:
+
+Example
+const person = {
+  name: "John",
+  today: new Date()
+};
+
+let myString = JSON.stringify(person);
+document.getElementById("demo").innerHTML = myString;
+
+Prototype Inheritance
+All JavaScript objects inherit properties and methods from a prototype:
+
+Date objects inherit from Date.prototype
+Array objects inherit from Array.prototype
+Person objects inherit from Person.prototype
+The Object.prototype is on the top of the prototype inheritance chain:
+
+Date objects, Array objects, and Person objects inherit from Object.prototype.
+
+Adding Properties and Methods to Objects
+Sometimes you want to add new properties (or methods) to all existing objects of a given type.
+
+Sometimes you want to add new properties (or methods) to an object constructor.
+
+Using the prototype Property
+The JavaScript prototype property allows you to add new properties to object constructors:
+
+Example
+function Person(first, last, age, eyecolor) {
+  this.firstName = first;
+  this.lastName = last;
+  this.age = age;
+  this.eyeColor = eyecolor;
+}
+
+Person.prototype.nationality = "English";
+
+Set Methods
+Method	Description
+new Set()	Creates a new Set
+add()	Adds a new element to the Set
+delete()	Removes an element from a Set
+has()	Returns true if a value exists
+clear()	Removes all elements from a Set
+forEach()	Invokes a callback for each element
+values()	Returns an Iterator with all the values in a Set
+keys()	Same as values()
+entries()	Returns an Iterator with the [value,value] pairs from a Set
+
+
+How to Create a Set
+You can create a JavaScript Set by:
+
+Passing an Array to new Set()
+Create a new Set and use add() to add values
+Create a new Set and use add() to add variables
+
+Map Methods
+Method	Description
+new Map()	Creates a new Map object
+set()	Sets the value for a key in a Map
+get()	Gets the value for a key in a Map
+clear()	Removes all the elements from a Map
+delete()	Removes a Map element specified by a key
+has()	Returns true if a key exists in a Map
+forEach()	Invokes a callback for each key/value pair in a Map
+entries()	Returns an iterator object with the [key, value] pairs in a Map
+keys()	Returns an iterator object with the keys in a Map
+values()	Returns an iterator object of the values in a Map
+Property	Description
+size	Returns the number of Map elements
+
+How to Create a Map
+You can create a JavaScript Map by:
+
+Passing an Array to new Map()
+Create a Map and use Map.set()

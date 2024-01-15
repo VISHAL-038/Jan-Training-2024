@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grocery List</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 20px;
+    }
+
+    #groceryList {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .grocery-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 5px;
+    }
+
+    .grocery-item span {
+      flex-grow: 1;
+      margin-right: 10px;
+    }
+
+    .price {
+      font-weight: bold;
+      color: #007bff;
+    }
+
+    .grocery-item button {
+      background-color: #dc3545;
+      color: #fff;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+
+    #total {
+      margin-top: 10px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Grocery List</h1>
+
+<input type="text" id="itemInput" placeholder="Enter item">
+<input type="number" id="priceInput" placeholder="Enter price">
+<button onclick="addItem()">Add Item</button>
+
+<ul id="groceryList"></ul>
+
+<div id="total">Total: $0</div>
+
+<script>
+  function addItem() {
+    const itemInput = document.getElementById('itemInput');
+    const priceInput = document.getElementById('priceInput');
+    
+    const itemName = itemInput.value.trim();
+    const itemPrice = parseFloat(priceInput.value);
+
+    if (itemName !== '' && !isNaN(itemPrice) && itemPrice >= 0) {
+      const groceryList = document.getElementById('groceryList');
+      const listItem = document.createElement('li');
+      listItem.className = 'grocery-item';
+
+      const itemNameElement = document.createElement('span');
+      itemNameElement.textContent = itemName;
+
+      const priceElement = document.createElement('span');
+      priceElement.textContent = `$${itemPrice.toFixed(2)}`;
+      priceElement.className = 'price';
+
+      const removeButton = document.createElement('button');
+      removeButton.textContent = 'Remove';
+      removeButton.addEventListener('click', () => removeItem(listItem, itemPrice));
+
+      listItem.appendChild(itemNameElement);
+      listItem.appendChild(priceElement);
+      listItem.appendChild(removeButton);
+
+      groceryList.appendChild(listItem);
+
+      updateTotal(itemPrice);
+
+      itemInput.value = '';
+      priceInput.value = '';
+    }
+  }
+
+  function removeItem(item, itemPrice) {
+    const groceryList = document.getElementById('groceryList');
+    groceryList.removeChild(item);
+
+    updateTotal(-itemPrice);
+  }
+
+  function updateTotal(amount) {
+    const totalElement = document.getElementById('total');
+    const currentTotal = parseFloat(totalElement.textContent.replace('Total: $', '')) || 0;
+    const newTotal = currentTotal + amount;
+    totalElement.textContent = `Total: $${newTotal.toFixed(2)}`;
+  }
+</script>
+
+</body>
+</html>

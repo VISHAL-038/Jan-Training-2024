@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+header h1 {
+    display: inline;
+}
+
+nav ul {
+    display: inline;
+    list-style-type: none;
+    padding: 0;
+}
+
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+    background-image: url('image-link'); /* Replace 'image-link' with the actual link to the image */
+    background-size: cover;
+    background-position: center;
+    color: black;
+    padding: 50px;
+}
+
+section h2 {
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+}

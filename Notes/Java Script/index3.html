@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function person(name, age){
+            this.name=name;
+            this.age=age;
+            this.yearsUntilRetire = yearsLeft;
+        }
+
+        function yearsLeft(){
+            var numYears = 65 - this.age;
+            return numYears;
+        }
+
+        // make a new object create a new instance of object
+        var bucky = new person("bucky",24);
+        var tl = new person("tl",23);
+    </script>
+</head>
+<body>
+    <script type="text/javascript">
+        // var tuna="hey i am autna fish";
+        // document.write(tuna.length);
+        // document.write(bucky.name);
+        // document.write(tl.age);
+        document.write(bucky.yearsUntilRetire())
+    </script>
+</body>
+</html>

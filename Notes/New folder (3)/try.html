@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f4f4f4;
+    }
+
+    #timer {
+      font-size: 2em;
+      color: #333;
+    }
+  </style>
+  <title>Countdown Timer</title>
+</head>
+<body>
+  <label for="days">Days: </label>
+  <input type="number" id="days" min="0" value="1">
+  <label for="hours">Hours: </label>
+  <input type="number" id="hours" min="0" max="23" value="12">
+  <label for="minutes">Minutes: </label>
+  <input type="number" id="minutes" min="0" max="59" value="30">
+  <label for="seconds">Seconds: </label>
+  <input type="number" id="seconds" min="0" max="59" value="0">
+  <button onclick="startTimer()">Start Countdown</button>
+  <button onclick="stopTimer()">Stop Countdown</button>
+  <div id="timer">00d 00h 00m 00s</div>
+
+  <script>
+    let countdownTimer;
+
+    function startTimer() {
+      clearInterval(countdownTimer);
+
+      const days = parseInt(document.getElementById('days').value, 10);
+      const hours = parseInt(document.getElementById('hours').value, 10);
+      const minutes = parseInt(document.getElementById('minutes').value, 10);
+      const seconds = parseInt(document.getElementById('seconds').value, 10);
+
+      const durationInSeconds = (days * 24 * 3600) + (hours * 3600) + (minutes * 60) + seconds;
+      let timer = durationInSeconds;
+
+      if (isNaN(timer) || timer <= 0) {
+        alert('Please enter valid positive numbers for the countdown duration.');
+        return;
+      }
+
+      countdownTimer = setInterval(function() {
+        const remainingDays = Math.floor(timer / (3600 * 24));
+        const remainingHours = Math.floor((timer % (3600 * 24)) / 3600);
+        const remainingMinutes = Math.floor((timer % 3600) / 60);
+        const remainingSeconds = timer % 60;
+
+        document.getElementById('timer').textContent = `${String(remainingDays).padStart(2, '0')}d ${String(remainingHours).padStart(2, '0')}h ${String(remainingMinutes).padStart(2, '0')}m ${String(remainingSeconds).padStart(2, '0')}s`;
+
+        if (--timer < 0) {
+          clearInterval(countdownTimer);
+          alert('Timer expired!');
+        }
+      }, 1000);
+    }
+
+    function stopTimer() {
+      clearInterval(countdownTimer);
+      alert('Countdown stopped!');
+    }
+  </script>
+</body>
+</html>
