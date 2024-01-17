@@ -5,9 +5,9 @@ import "./Navbar.css";
 function Navbar() {
   return (
     <header>
-      <nav class="navbar">
-        <div class="logo">Your Logo</div>
-        <ul class="nav-list">
+      <nav className="navbar">
+        <div className="logo">Your Logo</div>
+        <ul className="nav-list">
           <li>
             <a href="index.html">Home</a>
           </li>
@@ -17,7 +17,7 @@ function Navbar() {
           <li>
             <a href="#">Services</a>
           </li>
-          <li class="dropdown">
+          <li className="dropdown">
             <a href="#">Products</a>
             <ul class="dropdown-content">
               <li>

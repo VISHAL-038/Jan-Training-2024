@@ -1,0 +1,17 @@
+.Navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: grey; /* Change the background color as needed */
+}
+
+.Navbar li {
+    display: inline;
+    margin-right: 15px; /* Adjust the margin as needed */
+}
+
+.Navbar li {
+    text-decoration: none;
+    color: white; /* Change the text color as needed */
+}

@@ -3,9 +3,9 @@ import "./Footer.css";
 function Footer() {
   return (
     <footer>
-      <div class="footer-content">
-        <div class="footer-logo">Your Logo</div>
-        <div class="footer-links">
+      <div className="footer-content">
+        <div className="footer-logo">Your Logo</div>
+        <div className="footer-links">
           <ul>
             <li>
               <a href="#">Privacy Policy</a>
