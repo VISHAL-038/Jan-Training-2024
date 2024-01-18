@@ -60,6 +60,14 @@ import FunctionComponent from "./assets/components/hero/FunctionComponent";
 import Navbar from "./assets/components/navbar/Navbar"
 import Counter from "./assets/components/hero/Counter"
 import Contact from "./assets/components/hero/Contact";
+import Initializing from "./assets/components/hero/Initializing";
+import SetSimpleExample from "./assets/components/hero/SetSimpleExample";
+import ReadStateExample from "./assets/components/hero/ReadStateExample";
+import ReadOnlyStateExample from "./assets/components/hero/ReadOnlyStateExample";
+import UpdateObjectStateExample from "./assets/components/hero/UpdateObjectStateExample";
+import ExampleStateArray from "./assets/components/hero/ExampleStateArray";
+import MyForm from "./assets/components/hero/MyForm";
+import Timer01 from "./assets/components/hero/Timer01";
 
 function App(){
   return(
@@ -67,10 +75,18 @@ function App(){
     // <LifeCycle/>
     //<FunctionComponent/> 
     // <Counter/>
-    <div>
-      <Navbar/>
+    // <Navbar/>
       
-      <Contact/>
+    //   <Contact/>
+    //   <Initializing/>
+    // <SetSimpleExample/>
+    // <ReadStateExample/>
+    // <ReadOnlyStateExample/>
+    //<UpdateObjectStateExample/>
+    <div>
+      <ExampleStateArray/>
+      <MyForm/>
+      <Timer01/>
     </div>
     
   )

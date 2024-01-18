@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="form-container">
+        <div class="form-inner">
+          <h2>Apply Now</h2>
+          <img src="./assests/graphic-cartoon-character-job-interview-vector-34123795.jpg" alt="">
+          <form>
+            <div class="container">
+                <div>
+              <label for="first-name">First Name</label>
+              <br>
+              <input type="text" id="first-name" required>
+            </div>
+                <div>
+              <label for="last-name">Last Name</label>
+              <br>
+              <input type="text" id="last-name" required>
+            </div>
+            </div>
+
+            <div class="container">
+            <div>
+              <label for="email">Email</label>
+              <br>
+              <input type="email" id="email" required>
+            </div>
+            <div>
+              <label for="gender">Gender</label>
+              <br>
+              <select id="gender" required>
+                <option value="">Select an option</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+              </select>
+            </div>
+
+            </div>
+            
+            <div class="container">
+                <div>
+                <label for="areacode">Area Code</label>
+                <br>
+                <input type="text" id="areacode" name="areacode" placeholder="Area code.." required>
+            </div>
+            <div>
+                <label for="phone">Phone Number</label>
+                <br>
+                <input type="tel" id="phone" name="phone" placeholder="Your phone number.." required>
+            </div>
+            </div>
+            <br><br>
+              <label for="position">Applying for Position:</label>
+              <br>
+              <input type="text" placeholder="" required>
+            
+              <br><br>
+              <label for="start-date">When can you start?</label>
+              <br>
+              <input type="date" id="start-date" required>
+              <br><br>
+            
+              <label for="address">Address</label>
+              <br>
+              <input type="text" id="address" required>
+              <br><br>
+            
+              <label for="cover-letter">Cover Letter</label>
+              <br>
+              <textarea id="cover-letter" required></textarea>
+              <br><br>
+
+              <label for="resume">Upload Resume</label>
+              <br>
+              <input type="file" id="resume" required>
+            
+            <br><br>
+             
+            <button type="submit">Apply Now</button>
+          </form>
+        </div>
+      </div>
+</body>
+</html>
