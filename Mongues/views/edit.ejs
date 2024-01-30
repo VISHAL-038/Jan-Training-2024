@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Add User</h2>
+    <form >
+        <label for="id">ID:</label>
+        <input type="text" id="id" name="i" value="<%=data[0].id%>" required>
+        <br>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="n" value="<%=data[0].name%>" required>
+        <br>
+        <label for="course">Course:</label>
+        <input type="text" id="course" name="c"  value="<%=data[0].course%>"required>
+        <br>
+        <button type="submit" value="submit" id="submit" name="submit">Update Record</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,62 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Images</title>
+  <!-- Bootstrap CSS link -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+
+    .container {
+      max-width: 1200px;
+    }
+
+    .row.bg-secondary {
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    p {
+      font-size: 18px;
+      color: #6c757d;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container mt-5">
+  <% if (data && data.length > 0) { %>
+    <div class="row bg-secondary p-4">
+      <% data.forEach(image => { %>
+        <div class="col-md-3 mb-4">
+          <div class="row">
+            <img src="<%= image.originalname %>" alt="<%= image.originalname %>" class="img-fluid" />
+          </div>
+        </div>
+      <% }) %>
+    </div>
+  <% } else { %>
+    <p>No image available.</p>
+  <% } %>
+</div>
+
+<!-- Bootstrap JS and Popper.js scripts (required for some Bootstrap features) -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>

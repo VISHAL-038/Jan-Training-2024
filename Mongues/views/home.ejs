@@ -1,0 +1,41 @@
+<%-include('nav')-%>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Data</h1>
+    <br />
+    <a href="/add">
+        <button style="background-color: black; color: white">Add record</button>
+      </a>
+    <table border="1" style="width: 50%">
+        <thead>
+            <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Course</th>
+            </tr>
+        </thead>
+        <tbody style="text-align: center">
+        <% dt.forEach(row => { %>
+            <tr>
+                <td><%= row.id %></td>
+                <td><%= row.name %></td>
+                <td><%= row.course %></td>
+                <td>
+                    <a href="/delete?delid=<%=row.id%>">
+                        <button style="background-color: red; color: white">Delete</button>
+                    </a>
+                    <a href="/edit?upid=<%=row.id%>">
+                        <button style="background-color: green; color: white">Edit</button>
+                    </a>
+                </td>
+            </tr>
+        <% }) %>
+</body>
+</html>

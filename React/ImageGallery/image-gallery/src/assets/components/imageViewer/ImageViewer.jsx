@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import "./ImageViewer.css"
+import "./ImageViewer.css";
+
 
 const BASE_URL = "https://pixabay.com/api/"
 const API_KEY = "41907257-9a907ec007c8651dcf22e20e6"
