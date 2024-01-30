@@ -1,0 +1,38 @@
+<%-include('nav')-%>
+
+<!-- <%=data[0].id%>
+<%=data[0].name%>
+<%=data[0].course%>
+<%=data[1].id%>
+<%=data[2].id%>
+<%=data[3].id%> -->
+
+<h1>Data</h1>
+<br />
+<table border="1" style="width: 50%">
+  <a href="/insert">
+    <button style="background-color: black; color: white">Add record</button>
+  </a>
+
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Course</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody style="text-align: center">
+    <% data.forEach(row => { %>
+    <tr>
+      <td><%= row.id %></td>
+      <td><%= row.name %></td>
+      <td><%= row.course %></td>
+      <td>
+        <button style="background-color: green; color: white">Edit</button>
+        <button style="background-color: red; color: white">Delete</button>
+      </td>
+    </tr>
+    <% }) %>
+  </tbody>
+</table>
