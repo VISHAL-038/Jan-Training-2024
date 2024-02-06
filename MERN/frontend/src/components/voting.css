@@ -1,0 +1,40 @@
+body {
+    background-color: #242424;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+
+  .container {
+    display: flex;
+    gap: 20px;
+  }
+
+  .box {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    color: white;
+  }
+
+  .submit-btn,
+  .remove-btn {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.remove-btn {
+  background-color: #f44336;
+}
